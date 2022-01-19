@@ -1,0 +1,139 @@
+header {
+  background-color: $purple-900;
+
+  .container-header {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    padding: 1rem 0;
+    gap: 1.5rem;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    h1 {
+      order: 2;
+      margin: 0;
+      .logo-header {
+        height: 4rem;
+      }
+    }
+
+    nav {
+      order: 1;
+
+      @include tablet {
+        order: 2;
+      }
+      ul {
+        display: block;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+
+        @include tablet {
+          position:static;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+        li {
+          background-color: $purple-900;
+          padding: 1rem 0 1rem 1rem;
+          transition: filter 0.2s;
+
+          &:hover {
+            filter: brightness(1.2);
+
+            @include tablet {
+              filter: none;
+            }
+          }
+
+          a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+              color: $purple-100;
+            }
+          }
+        }
+      }
+      button {
+        background-color: transparent;
+        border: 0;
+        
+        @include tablet {
+          display: none;
+        }
+        .menu {
+          width: 1.5rem;
+          height: 1.5rem;
+  
+          div {
+            width: 1.25rem;
+            height: 1.25rem;
+            position: relative;
+  
+            span {
+              height: 3px;
+              border-radius: 5px;
+              width: 100%;
+              position: absolute;
+              background-color: $white;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+  
+            .line-1 {
+              transform: translate(-50%, -9px);
+            }
+  
+            .line-3 {
+              transform: translate(-50%, 7px);
+            }
+          }
+        }
+      }
+      .btn-active {
+        .menu {
+          div {
+            .line-1 {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+      
+            .line-3 {
+              transform: translate(-50%, -50%) rotate(45deg);
+            }
+      
+            .line-2 {
+              width: 0;
+            }
+          }  
+        }
+      }
+    }
+    .social-icons {
+      order: 3;
+      font-size: 1.5rem;
+      color: $white;
+      display: flex;
+      gap: 1rem;
+      margin-right: 0;
+      margin-left: auto;
+
+      @include tablet {
+        margin: 0;
+      }
+
+      i:hover {
+        color: $purple-100;
+      }
+    }
+  }
+}

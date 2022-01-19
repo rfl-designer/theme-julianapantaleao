@@ -1,0 +1,31 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'header.scss';
+@import 'home.scss';
+@import 'extraordinarios.scss';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  background-color: rgb(14, 0, 14);
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+
+  span {
+    color: $white;
+  }
+}

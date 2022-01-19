@@ -1,0 +1,203 @@
+.s-e-hero {
+  background-image: url(../assets/hero-extraordinario.jpg);
+  background-position-x: 80%;
+  background-position-y: 50%;
+  background-size: cover;
+  .container-e-hero {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-size: 3rem;
+      color: $white;
+      font-weight: 500;
+      line-height: 125%;
+    }
+
+    span {
+      height: 3px;
+      background-color: $white;
+      width: 50%;
+      margin-top: .25rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-top: .5rem;
+      color: $white;
+    }
+  }
+} 
+
+.s-about {
+  background-color: $purple-900;
+  padding: 3rem 0;
+  
+
+  .container-about {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 125%;
+      color: $white;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    .subtitle-about {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 110%;
+      margin-top: 0.5rem;
+      color: $white;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    .p-about {
+      margin-top: 2rem;
+      color: $white;
+      line-height: 125%;
+      letter-spacing: 1px;
+      font-weight: 300;
+
+      @include tablet {
+        text-align: center;
+        width: 70%;
+        align-self: center;
+      }
+    }
+
+    .title-objetives {
+      margin: 1.5rem 0;
+    }
+
+    .s-objetives {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .objetive {
+        width: 13rem;
+        height: 12rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0.5rem;
+        border-radius: .5rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        filter: drop-shadow(4px 4px 4px $shadow);
+
+        @include tablet {
+          width: 12rem;
+        }
+
+        i {
+          color: $white;
+          font-size: 4rem;
+        }
+
+        h3 {
+          font-size: 1rem;
+          color: $white;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+.s-contato {
+  background-color: $purple-900;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    width: 70%;
+  }
+
+  .form-extraordinarios {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    padding: 3rem 0 2rem 0;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 1.5rem;
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form {
+      max-width: 768px;
+      margin: 0 auto;
+      .inputs-contato {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          background-color: $white;
+          border: 0;
+          width: 100%;
+          font-size: 0.9rem;
+          font-weight: 300;
+          padding: 1rem 0 1rem 1rem;
+          border-radius: 3px;
+          color: $purple-900;
+        }
+  
+        select {
+          background-color: $white;
+          border: 0;
+          width: 100%;
+          font-size: 0.9rem;
+          font-weight: 300;
+          padding: 1rem 0 1rem 1rem;
+          border-radius: 3px;
+          color: $purple-900;
+        }
+
+        .btn-contato {
+          width: 30%;
+          background-color: $purple-100;
+          color: $purple-900;
+          font-size: .9rem;
+          font-weight: 500;
+          padding: 1rem 0;
+          transition: filter .3rem;
+
+          &:hover {
+            filter: brightness(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
